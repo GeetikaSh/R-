@@ -1,0 +1,32 @@
+library(tidyverse)
+
+#Dataframe
+grade1<-data.frame(
+ First=c("Mark","Dave","Jackie"),
+ Last=c("Gingrass","Doe","Smith"),
+ Grade=c(98,78,65))
+print(grade1)
+
+#Tibble
+'''
+tibble () prints the data of the dataset in the similar way a dataframe () does. 
+tibble () is a new form/ version of the usual dataframe (), which is part of the tidyverse library.
+'''
+grade2<-tibble(
+ First=c("Mark","Dave","Jackie"),
+ Last=c("Gingrass","Doe","Smith"),
+ Grade=c(98,78,65))
+print(grade2)
+
+#Tribble
+'''
+ A tribble () is used for creating a row-wise, readable tibble in R. This is useful for creating small tables of data. 
+ **Syntax: tribble (~column1, ~column2)** where, Row column — represents the data in row by row layout This recipe demonstrates an example on tribble in R.
+ '''
+grade3<-tribble(
+ ~First,~Last,~Grade,
+    "Mark","Gingarass",98,
+    "Dave","Doe",78,
+    "Jackie","Smith",65,
+) 
+print(grade3)
